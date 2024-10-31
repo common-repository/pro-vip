@@ -1,0 +1,144 @@
+.wv-single-download {
+  background-color: #F4F4F4;
+  border: 2px solid #D7D7D7;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 25px 0;
+  div.box {
+    float: left;
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    margin-top: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  h3.title {
+    text-align: center;
+    border-bottom: 2px solid #DDD;
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+
+  p.login {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    > span {
+      margin-bottom: 10px;
+      display: block;
+      color: gray;
+    }
+  }
+
+  .files-list {
+    text-align: center;
+    margin-top: 15px;
+    > .file {
+
+      .file-name {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+    }
+
+  }
+
+  #pv-purchase-file {
+    .title {
+      margin: 0 -10px 10px;
+      text-align: center;
+    }
+    table {
+      width: calc(100% + 22px);
+      margin: 0 -10px;
+      tr {
+        td {
+          background-color: #F7F7F7;
+          padding: 16px 18px;
+          &.label {
+            width: 40%;
+          }
+          &.input {
+            width: 60%;
+            position: relative;
+            select, input {
+              width: 100%;
+              box-sizing: border-box;
+            }
+            label.error {
+              position: absolute;
+              bottom: 50%;
+              left: 100%;
+              background-color: #DD311F;
+              color: #FFF;
+              padding: 2px 11px;
+              box-sizing: border-box;
+              border-radius: 2px;
+              z-index: 10;
+              font-size: 90%;
+              display: inline-block;
+              margin-bottom: -13px;
+              white-space: nowrap;
+              cursor: pointer;
+              &:before {
+                content: " ";
+                position: absolute;
+                top: 50%;
+                width: 0;
+                height: 0;
+                border-top: 5px solid rgba(0, 0, 0, 0);
+                border-bottom: 5px solid rgba(0, 0, 0, 0);
+                border-right: 5px solid #DD311F;
+                left: -5px;
+                margin-top: -6px;
+              }
+            }
+          }
+        }
+      }
+    }
+    p.purchase {
+      text-align: center;
+      margin: 10px 0 0 0;
+    }
+  }
+
+}
+
+body.rtl {
+  .wv-single-download {
+    div.box {
+      float: right;
+      margin-left: 20px;
+      margin-right: 0;
+    }
+    #pv-purchase-file {
+      table {
+        tr {
+          td {
+            &.input {
+              label.error {
+                left: auto;
+                right: 100%;
+                &:before {
+                  border-right: 0;
+                  border-left: 5px solid #DD311F;
+                  right: -5px;
+                  left: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
